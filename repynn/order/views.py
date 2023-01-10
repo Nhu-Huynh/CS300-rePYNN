@@ -3,7 +3,8 @@ from django.contrib.auth.decorators import login_required
 
 from .models import OrderItem
 from .forms import OrderCreateForm
-from cart.cart import Cart
+# from cart.cart import Cart
+from cart.models import Cart
 
 # Create your views here.
 

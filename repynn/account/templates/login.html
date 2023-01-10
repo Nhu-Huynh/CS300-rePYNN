@@ -25,8 +25,11 @@
           LOG IN
         </button>
         <span class="forgotPassword">Forgot password?</span>
-        <input class="UsenameInput" type="text" value="Usename" />
-        <input class="PassWordInput" type="password" value="Password" />
+        <form method="post">
+          {{ form.as_p }}
+          {% csrf_token %}
+          <p><input type="submit" value="Log in"></p>
+      </form>
       </div>
     </div>
   </body>

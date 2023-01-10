@@ -4,6 +4,6 @@ from . import views
 app_name = 'dishes'
 
 urlpatterns = [
-    path('', views.dish_menu, name='dish_menu'),
+    path('menu', views.dish_menu, name='dish_menu'),
     path('<int:pid>/', views.dish_detail, name="dish_detail")
 ]

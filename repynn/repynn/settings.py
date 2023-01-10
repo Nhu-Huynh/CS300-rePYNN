@@ -33,13 +33,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jazzmin',
+    'account.apps.AccountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'account',
     'dish',
     'payment.apps.PaymentConfig',
     'order.apps.OrderConfig',
@@ -108,6 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LOGIN_REDIRECT_URL = 'dishes:dish_menu'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout' 
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
