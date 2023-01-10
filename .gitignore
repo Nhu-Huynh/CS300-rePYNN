@@ -8,6 +8,9 @@
 /virenv
 .vscode/
 
+.env
+/env
+
 .gitignore
 repynn/customer/migrations/__init__.py
 
