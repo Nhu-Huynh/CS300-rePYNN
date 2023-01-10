@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGIN_REDIRECT_URL = 'dish:dish_menu'
+LOGIN_REDIRECT_URL = 'dishes:dish_menu'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
