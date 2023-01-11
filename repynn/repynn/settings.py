@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -297,3 +298,9 @@ CART_SESSION_ID = 'cart'
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51MOeUZEeT5fc3Lje6PIdrccsBRZzzEabuSmt96r1iVKXgDoU2i038wTebv6ujh0JFOj8DWsrBdepIl3rSa362od20096J3MNvn' # Publishable key 
 STRIPE_SECRET_KEY = 'sk_test_51MOeUZEeT5fc3LjeeuWM7E52Hvyp7VTIBa0mJZxHD3dh5aMEaCKY5HdH6c7qPNksMRWPJ1BNhMX4SpTL1k5g7ybK00JOHodqqb' # Secret key 
 STRIPE_API_VERSION = '2022-08-01'
+
+############################################
+
+SESSION_EXPIRE_SECONDS = 3600*6  # 18 hours
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+SESSION_TIMEOUT_REDIRECT = 'login'

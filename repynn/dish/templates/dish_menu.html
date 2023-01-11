@@ -77,6 +77,7 @@
                                   <p class="card-text" style="color:white; font-family:Gelasio;">{{dish.price}} đ</p>
                                   <a href="" class="btn btn-primary" onclick="" style="background-color:#8D182B; border:none;">Add to cart</a>
                                   <form action="{% url "cart:cart_add" dish.id %}" method="post">
+                                    {{ cart_dish_form }}
                                     {% csrf_token %}
                                     <input type="submit" class="btn btn-primary" value="Add to cart">
                                    </form>

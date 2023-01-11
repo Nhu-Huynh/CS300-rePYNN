@@ -6,9 +6,11 @@ from cart.forms import CartAddDishForm
 def dish_menu(request):
     dishes = Dish.objects.all()
     categories = Category.objects.all()
+    cart_dish_form = CartAddDishForm()
     return render(request, 'dish_menu.html', {
         'dishes': dishes,
-        'categories': categories
+        'categories': categories,
+        'cart_dish_form': cart_dish_form
     })
 
 

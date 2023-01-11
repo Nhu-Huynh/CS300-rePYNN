@@ -1,4 +1,4 @@
-from decimal import Decimal
+
 import stripe
 from django.conf import settings
 from django.shortcuts import render, redirect, reverse, get_object_or_404
@@ -33,7 +33,7 @@ def payment_process(request):
         for item in order.items.all():
             session_data['line_items'].append({
                 'price_data': {
-                    'unit_amount': int(item.price * Decimal('1')),
+                    'unit_amount': int(item.price * int('1')),
                     'currency': 'vnd',
                     'dish_data': {
                         'name': item.dish.name,
