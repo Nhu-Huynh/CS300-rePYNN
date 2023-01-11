@@ -56,11 +56,30 @@
 
 
                 <div class="navigationBar">
-                  <button class="AboutBar" onclick="window.location.href='aboutUs.html'">About</button>  
-                  <button class="MenuBar" onclick="window.location.href='menu.html'">Menu</button> 
-                  <button class="CartBar" onclick="window.location.href='homepage.html'">Cart</button> 
-                  <button class="HomeBar" onclick="window.location.href='homepage.html'">Home</button> 
-                  <button class="OrderBar" onclick="window.location.href='order.html'">Order</button> 
+                  <button class="AboutBar">
+                    <a href="{% static 'repynn/account/templates/aboutUs.html' %}"></a>
+                    About
+                  </button> 
+
+                  <button class="MenuBar">
+                    <a href="{% static 'repynn/dish/templates/dish_menu.html' %}"></a>
+                    Menu
+                  </button> 
+
+                  <button class="CartBar">
+                    <a href=""></a>
+                    Cart
+                  </button> 
+
+                  <button class="HomeBar">
+                    <a href="{% static 'repynn/account/templates/homepage.html' %}"></a>
+                    Home
+                  </button> 
+
+                  <button class="OrderBar">
+                    <a href="{% static 'repynn/order/templates/order.html' %}"></a>  
+                    Order
+                  </button> 
                 </div>
                 </div>
 
