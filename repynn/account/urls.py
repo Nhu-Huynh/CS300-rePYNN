@@ -7,5 +7,6 @@ app_name = 'account'
 
 urlpatterns = [
     path('', auth_views.LoginView.as_view(), name='login'),
-
+    path('/homepage', views.homepage, name='homepage'),
+    path('/aboutus', views.aboutUs, name='about_us'),
 ]

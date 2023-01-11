@@ -23,3 +23,10 @@ def user_login(request):
     else:
         form = LoginForm()
     return render(request, 'signin.html', {'form': form})
+
+def homepage(request):
+    return render(request, 'homepage.html')
+
+def aboutUs(request):
+    return render(request, 'aboutUs.html')
+    
