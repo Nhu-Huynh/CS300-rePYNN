@@ -50,36 +50,41 @@
 
               <div class=the_whole_bar>
                 <div  class="logo"></div>
-                <span  class="_table_id_">_table_id_</span>
+                <span class="_table_id_">_table_id_</span>
                 <div  class="navi1"></div>
-                <span  class="log_out">Log out</span>
+                <span class="log_out">Log out</span>
 
 
                 <div class="navigationBar">
-                  <button class="AboutBar">
-                    <a href="{% static 'repynn/account/templates/aboutUs.html' %}"></a>
-                    About
-                  </button> 
-
-                  <button class="MenuBar">
-                    <a href="{% static 'repynn/dish/templates/dish_menu.html' %}"></a>
-                    Menu
-                  </button> 
-
-                  <button class="CartBar">
-                    <a href=""></a>
-                    Cart
-                  </button> 
-
-                  <button class="HomeBar">
-                    <a href="{% static 'repynn/account/templates/homepage.html' %}"></a>
-                    Home
-                  </button> 
-
-                  <button class="OrderBar">
-                    <a href="{% static 'repynn/order/templates/order.html' %}"></a>  
-                    Order
-                  </button> 
+                  <a href="{% url 'account:about_us' %}">
+                    <button class="AboutBar">About</button> 
+                  </a>
+                    
+                  <a href="{% url 'dishes:dish_menu' %}"> 
+                      <button class="MenuBar">
+                        Menu
+                      </button> 
+                  </a>
+                  
+                  <a href="">
+                    <button class="CartBar">
+                      Cart
+                    </button> 
+                  </a>
+                    
+                  <a href="{% url 'account:homepage' %}">
+                    <button class="HomeBar"> 
+                      Home
+                    </button>
+                  </a>
+                    
+                  <!-- phuong's order -->
+                  <a href="{% static 'repynn/order/templates/order.html' %}">
+                    <button class="OrderBar">
+                      Order
+                    </button>
+                  </a>  
+                     
                 </div>
                 </div>
 

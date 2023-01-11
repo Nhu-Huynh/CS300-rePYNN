@@ -1,10 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
 </head>
 <body>
   <div class=about_us_page>
@@ -32,11 +34,35 @@
       <span  class="log_out">Log out</span>
       
       <div class="navigationBar">
-        <button class="AboutBar" onclick="window.location.href='aboutUs.html'">About</button>  
-        <button class="MenuBar" onclick="window.location.href='menu.html'">Menu</button> 
-        <button class="CartBar" onclick="window.location.href='homepage.html'">Cart</button> 
-        <button class="HomeBar" onclick="window.location.href='homepage.html'">Home</button> 
-        <button class="OrderBar" onclick="window.location.href='order.html'">Order</button> 
+        <a href="{% url 'account:about_us' %}">
+          <button class="AboutBar">About</button> 
+        </a>
+          
+        <a href="{% url 'dishes:dish_menu' %}"> 
+            <button class="MenuBar">
+              Menu
+            </button> 
+        </a>
+        
+        <a href="">
+          <button class="CartBar">
+            Cart
+          </button> 
+        </a>
+          
+        <a href="{% url 'account:homepage' %}">
+          <button class="HomeBar"> 
+            Home
+          </button>
+        </a>
+          
+        <!-- phuong's order -->
+        <a href="{% static 'repynn/order/templates/order.html' %}">
+          <button class="OrderBar">
+            Order
+          </button>
+        </a>  
+           
       </div>
     </div>
 
