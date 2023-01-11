@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
 
 from .models import OrderItem
 from .forms import OrderCreateForm
-# from cart.cart import Cart
 from cart.cart import Cart
 
 # Create your views here.
@@ -27,7 +27,8 @@ def order_create(request):
                           {'order': order})
         else:
             form = OrderCreateForm()
-        return render(request, 'create.html', {
-            'cart': cart,
-            'form': form
-        })
+        # return render(request, 'create.html', {
+        #     'cart': cart,
+        #     'form': form
+        # })
+        return redirect('dishes:dish_menu')
