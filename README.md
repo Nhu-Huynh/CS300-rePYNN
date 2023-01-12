@@ -2,8 +2,6 @@
 > A restaurant management web-based application.
 
 
-![](header.png)
-
 ## Installation
 
 If you don't have python3 and pip installed, please install them first.
@@ -14,16 +12,20 @@ Clone the project via HTTPS.
 git clone https://github.com/Nhu-Huynh/CS300-rePYNN.git
 ```
 
+_Note: recommend creating a virtual environment for running the project._
+_Guide: [Create python virtual environment](https://docs.python.org/3/library/venv.html)_
+
 Install required packages
 ```sh
 pip install -r requirements.txt
 ```
 
 ## Usage 
-Go to the CS300-Repynn folder and run
+
+Go to the repynn directory and run
 
 ```sh
-python3 manage.py runserver
+python manage.py runserver
 ```
 
 ## Development setup
