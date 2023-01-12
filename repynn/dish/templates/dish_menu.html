@@ -1,24 +1,3 @@
-{% comment %} {% extends "base.html" %}
-{% load static %}
-{% block title %}
- {% if category %}{{ category.name }}{% else %}dishs{% endif %}
-{% endblock %}
-
-
-{% block content %}
- <div id="sidebar">
- <h3>Categories</h3>
- <ul>
- <li {% if not category %}class="selected"{% endif %}>
- <a href="">All</a>
- </li>
- {% for c in categories %}
- <a href="">{{ c.name }}</a>
-
-
-
- </div>
-{% endblock %} {% endcomment %}
 
 {% load static %}
 
@@ -53,7 +32,6 @@
                 <span class="_table_id_">_table_id_</span>
                 <div  class="navi1"></div>
                 <span class="log_out">Log out</span>
-
 
                 <div class="navigationBar">
                   <a href="{% url 'account:about_us' %}">

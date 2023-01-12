@@ -66,23 +66,10 @@
                 <div class="col-2">{{ cart.get_total_price }}đ</div>
             </div>
     </div>
-
-  </body>
-</html>
-
-    
-
-
-
-            
-            <tr class="total">
-                <td>Total</td>
-                <td colspan="4"></td>
-                <td class="num">${{ cart.get_total_price }}</td>
-            </tr>
-        </tbody>
-    </table>
     <p class="text-right">
         <a href="{% url 'dishes:dish_menu' %}">Continue shopping</a>
         <a href="{% url "order:order_create" %}">Checkout</a>
     </p>        
+
+  </body>
+</html>
