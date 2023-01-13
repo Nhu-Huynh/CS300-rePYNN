@@ -147,12 +147,11 @@
         <div class="intro17">
           <div class="intro18">
             <div class="intro19"></div>
-            <button
-              class="lets_order"
-              onclick="window.location.href='menu.html'"
-            >
-              Let’s Order
-            </button>
+            <a href="{% url 'dishes:dish_menu' %}">
+              <button class="lets_order">
+                Let’s Order
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -182,12 +181,11 @@
         <div class="e149_827">
           <div class="e55_673">
             <div class="ei55_673_55_611"></div>
-            <button
-              class="ei55_673_55_612"
-              onclick="window.location.href='menu.html'"
-            >
-              About
-            </button>
+            <a href="{% url 'account:about_us' %}">
+              <button class="ei55_673_55_612">
+                About
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -198,6 +196,7 @@
       <span class="log_out">Log out</span>
 
       <div class="e148_820">
+
         <div class="e149_825">
           <div class="e55_606">
             <span class="e55_607">We’ve Got So Much More</span>
@@ -208,18 +207,20 @@
             >
           </div>
         </div>
+
         <div class="e149_826">
           <div class="e55_610">
             <div class="e55_611"></div>
-            <button
-              class="lets_order2"
-              onclick="window.location.href='menu.html'"
-            >
-              Let’s Order
-            </button>
+            <a href="{% url 'dishes:dish_menu' %}">
+              <button class="lets_order2">
+                Let’s Order
+              </button>
+            </a>
           </div>
         </div>
+
       </div>
+
     </div>
   </body>
 </html>
